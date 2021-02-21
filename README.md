@@ -1,12 +1,10 @@
 # Google Software Product Sprint
 
-This repo contains the projects you'll work on throughout SPS.
+This repo contains Mauricio's portfolio and SPS projects.
 
-To get started:
-
-- Login to [Google Cloud Shell](https://ssh.cloud.google.com/cloudshell/editor)
-- Clone this repo: `cd; git clone https://github.com/google/software-product-sprint.git`
-- Open the GitHub setup walkthrough: `teachme ~/software-product-sprint/walkthroughs/week-0-setup/github-setup-walkthrough.md`
-  - If the tutorial panel does not open or display the walkthrough contents, try refreshing the page.
-
-Then follow the on-screen instructions to set up your repo.
+#About
+Hello! This repo will document my Google SPS experience. I hope to learn a lot in the 
+upcoming weeks which I plan to be reflected in my projects here. By the end of SPS, I
+plan to have grown as a programmer and made valuable connections with my peers and 
+mentors who I will get to know throughout the program. As I complete more projects, I
+hope to document it all here!
