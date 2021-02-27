@@ -2,8 +2,93 @@
   margin-left: auto;
   margin-right: auto;
   width: 650px;
+  background: rgb(255, 255, 255); /* Fallback color */
+  background: rgba(255, 255, 255, 0.12); /* Black background with 0.5 opacity */
+}
+
+#media-links {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
 #greeting-container {
   margin-top: 20px;
 }
+
+#profile-picture {
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-width: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#portfolio-name {
+    color: #FFFFFF;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#logo-block {
+    display: block;
+    margin: auto;
+}
+
+.logo {
+    margin: 5px;
+    justify-content: space-around;
+}
+
+.section-title {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 900;
+}
+.title-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.content-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.gallery-image {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+}
+
+.gallery-image:hover {
+    border: 1px solid #777;
+}
+
+.content-image {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: none;
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-image:hover {
+    border: 1px solid #777;
+}
+
+.rotate90 {
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
