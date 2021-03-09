@@ -29,3 +29,10 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
+async function fetchRandomMessage() {
+    const serverResponse = await fetch('/hello');
+    const responseText = await serverResponse.text();
+
+    const responseContainer = document.getElementById('response-container');
+    responseContainer.innerText = responseText;
+}
