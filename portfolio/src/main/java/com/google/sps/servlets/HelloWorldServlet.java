@@ -18,7 +18,7 @@ public class HelloWorldServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     ArrayList<String> messages = new ArrayList<String>();
-    messages.add("A fun fact about me is that I've flown a plane before! I participated in a program that ended with a pilot letting me fly his plane!");
+    messages.add("A fun fact about me is that I've flown a plane before! I participated in a program in 8th grade that ended with a pilot letting me fly his plane!");
     messages.add("Some of my favorite movies are The Shawshank Redemption and Pulp Fiction");
     messages.add("A place I have always wanted to visit is Rome. I hope to do so after graduating.");
 
