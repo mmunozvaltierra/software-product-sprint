@@ -1,0 +1,20 @@
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 650px;
+  background: rgb(255, 255, 255); /* Fallback color */
+  background: rgba(255, 255, 255, 0.12); /* Black background with 0.5 opacity */
+}
+
+#title {
+    color: #FFFFFF;
+    font-family: 'Titillium Web', sans-serif;
+    margin: auto;
+    width: fit-content;
+}
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+}
