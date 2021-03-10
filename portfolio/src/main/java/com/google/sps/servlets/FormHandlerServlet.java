@@ -24,6 +24,6 @@ public class FormHandlerServlet extends HttpServlet {
     System.out.println("Their message was: " + message);
 
     // Redirect user after input
-    response.sendRedirect("/index.html");
+    response.sendRedirect("/submitted.html");
   }
 }
