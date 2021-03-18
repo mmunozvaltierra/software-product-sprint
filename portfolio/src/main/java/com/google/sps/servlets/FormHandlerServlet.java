@@ -6,6 +6,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.cloud.datastore.Datastore;
+import com.google.cloud.datastore.DatastoreOptions;
+import com.google.cloud.datastore.Entity;
+import com.google.cloud.datastore.FullEntity;
+import com.google.cloud.datastore.KeyFactory;
+
 @WebServlet("/form-handler")
 public class FormHandlerServlet extends HttpServlet {
 
@@ -15,13 +21,20 @@ public class FormHandlerServlet extends HttpServlet {
     // Get the values entered in the form.
     String firstName = request.getParameter("first-name");
     String lastName = request.getParameter("last-name");
+    String fullName = firstName + " " + lastName;
     String email = request.getParameter("email");
     String message = request.getParameter("message-content");
 
-    // Print the value so you can see it in the server logs.
-    System.out.println(firstName + " " + lastName + " wants to contact you:");
-    System.out.println("Their email is: " + email);
-    System.out.println("Their message was: " + message);
+    //Store values in Datastore
+    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Message");
+    FullEntity messageEntity =
+        Entity.newBuilder(keyFactory.newKey())
+            .set("name", fullName)
+            .set("email", email)
+            .set("content", message)
+            .build();
+    datastore.put(messageEntity);
 
     // Redirect user after input
     response.sendRedirect("/submitted.html");
