@@ -12,6 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//Creates listener for 'Check Messages' button
+window.onload=function(){
+    var mb = document.getElementById("submit-retrieve");
+    mb.addEventListener("click", this.loadMessages);
+}
+
 /**
  * Adds a random greeting to the page.
  */
@@ -36,4 +42,26 @@ async function fetchRandomMessage() {
 
     const responseContainer = document.getElementById('response-container');
     responseContainer.innerText = contentText;
+}
+
+/** Fetches messages from datastore and adds them to the DOM. */
+function loadMessages() {
+  fetch('/list-messages').then(response => response.json()).then((messages) => {
+    const messageListElement = document.getElementById('message-list');
+    messages.forEach((message) => {
+      messageListElement.appendChild(createMessageElement(message));
+    })
+  });
+}
+
+/** Creates an element that represents a message */
+function createMessageElement(message) {
+  const messageElement = document.createElement('li');
+  messageElement.className = 'task';
+
+  const titleElement = document.createElement('span');
+  titleElement.innerText = message;
+
+  messageElement.appendChild(titleElement);
+  return messageElement;
 }
